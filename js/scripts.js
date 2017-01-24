@@ -8,8 +8,10 @@ function Ticket(movie, age, time){
 Ticket.prototype.price = function() {
   if (this.time === 1){
     return 11;
-  }else if (this.time ===2){
-    return this.movie
+  }else if (this.time ===2 && this.age ===1){
+    return this.movie-2;
+  }else if (this.time ===2 && this.age ===2){
+    return this.movie;
   }
 }
 
