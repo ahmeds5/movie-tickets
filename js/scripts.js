@@ -8,9 +8,9 @@ function Ticket(movie, age, time){
 Ticket.prototype.price = function() {
   if (this.time === 1){
     return 11;
-  }else if (this.time ===2 && this.age ===1){
+  } else if (this.time ===2 && this.age ===1){
     return this.movie-2;
-  }else if (this.time ===2 && this.age ===2){
+  } else if (this.time ===2 && this.age ===2){
     return this.movie;
   }
 }
@@ -24,6 +24,7 @@ $(document).ready(function(){
     var inputtedTime = parseInt($("#time option:selected").val());
     var newTicket = new Ticket(inputtedMovie, inputtedAge, inputtedTime);
 
+    $(".output").show();
     $("#price").text(newTicket.price());
   })
 })
